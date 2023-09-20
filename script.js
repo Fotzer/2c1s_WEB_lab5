@@ -74,7 +74,7 @@ function addCssToTag() {
     const tag = document.getElementById("script5-input").value;
     const css = document.getElementById("script5-textarea").value;
 
-    if(tag != "tagList") {
+    if(tag !== "tagList") {
         let tagList = localStorage.getItem("tagList").split(" ");
         if(!tagList.includes(tag)) {
             tagList.push(tag);
@@ -89,6 +89,31 @@ function addCssToTag() {
 }
 
 document.getElementById("script5-button1").addEventListener("click", addCssToTag);
+
+function removeCssFromTag() {
+    const tag = document.getElementById("script5-input").value;
+
+    if(tag !== "tagList") {
+        localStorage.removeItem(tag);
+        
+        let tagList = localStorage.getItem("tagList").split(" ");
+        
+        if(!tagList.includes(tag)) {
+
+            tagList.filter((element) => {
+                return element !== tag;
+            });
+
+            tagList = tagList.join(" ");
+            localStorage.setItem(tag, css);
+        }
+
+    } else {
+        alert("hehehe");
+    }
+}
+
+document.getElementById("script5-button2").addEventListener("click", removeCssFromTag);
 
 
 function onLoad() {
