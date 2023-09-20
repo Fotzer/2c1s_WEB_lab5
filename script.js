@@ -34,7 +34,7 @@ function script3() {
     const reversedValue = reverseString(input);
     alert(reversedValue);
 
-    document.cookie = `script3Cookie=${reversedValue};`;
+    document.cookie = `script3Cookie=${reversedValue}`;
     console.log(document.cookie);
 }
 
