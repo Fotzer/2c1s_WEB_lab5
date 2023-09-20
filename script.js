@@ -71,6 +71,7 @@ function toggleScript5FormVisibility() {
 document.getElementById("x").addEventListener("click", toggleScript5FormVisibility);
 
 function checkCssForTags() {
+    console.log(localStorage.getItem("tagList"));
     const tags = localStorage.getItem("tagList").split(" ");
 
     for(const tag of tags) {
@@ -121,6 +122,7 @@ function removeCssFromTag() {
             tagList = tagList.join(" ");
             localStorage.setItem(tag, css);
         }
+        checkCssForTags();
 
     } else {
         alert("hehehe");
@@ -151,7 +153,12 @@ function onLoad() {
             setBorderColor(color);
         }
     }
-    
+
+    if(localStorage.getItem("tagList") === null) {
+        localStorage.setItem("tagList", "");
+        console.log(1);
+    }
+
     checkCookiesScript3();
     checkBorderColor();
     checkCssForTags();
