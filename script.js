@@ -51,6 +51,7 @@ function onLoad() {
             alert(`Script3 cookies = ${cookieScript3Value}, cookies will be deleted after "OK" button click`);
             document.cookie = `script3Cookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
             alert(`Cookies were deleted`);
+            location.reload();
         }
     }
     console.log(document.cookie);
