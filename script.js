@@ -70,6 +70,18 @@ function toggleScript5FormVisibility() {
 
 document.getElementById("x").addEventListener("click", toggleScript5FormVisibility);
 
+function checkCssForTags() {
+    const tags = localStorage.getItem("tagList").split(" ");
+
+    for(const tag of tags) {
+        const css = localStorage.getItem(tag);
+
+        for(const element of document.getElementsByTagName(tag)) {
+            element.style.cssText = css;
+        }
+    }
+}
+
 function addCssToTag() {
     const tag = document.getElementById("script5-input").value;
     const css = document.getElementById("script5-textarea").value;
@@ -83,6 +95,8 @@ function addCssToTag() {
         }
 
         localStorage.setItem(tag, css);
+
+        checkCssForTags();
     } else {
         alert("hehehe");
     }
@@ -140,6 +154,7 @@ function onLoad() {
     
     checkCookiesScript3();
     checkBorderColor();
+    checkCssForTags();
 }
 
 document.onload = onLoad;
