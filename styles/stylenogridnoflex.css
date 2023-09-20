@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.blue {
+    background-color: #c8dcf4;
+}
+
+.div1 {
+    min-height: 15vh;
+    border: 1px black solid;
+    border-bottom: none;
+    padding-top: 80px
+}
+
+.upperbodytable {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.upperbodytable, .upperbodytable tr, .upperbodytable td{
+    border: none;
+}
+
+.x {
+    background-color: white;
+    border: 1px black solid;
+    width: fit-content;
+    margin-left: 30px;
+    padding: 10px;
+}
+
+.div1text {
+    width: fit-content;
+    margin-left: auto;
+}
+
+.table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.col1 {
+    width: 25%;
+}
+
+.col2 {
+    width: 50%;
+}
+
+.col3 {
+    width: 25%;
+}
+
+.tddiv2 {
+    height: 50vh;
+}
+
+.div2 {
+    background-color: #ffecdc;
+    vertical-align: top;
+    height: 100%;
+}
+
+.linklist {
+    padding-left: 20px;
+}
+
+.tddiv3 {
+    height: 5vh;
+}
+
+.div3 {
+    background-color: #f0f4dc;
+    text-align: center;
+    height: 100%;
+}
+
+.div3 > p {
+    padding-top: 15px;
+    margin: 0;
+}
+
+.div4 {
+    margin-top: auto; 
+    background-color: white;
+    text-align: center;
+    height: 100%;
+}
+
+.tddiv5 {
+    height: 45vh;
+}
+
+.div5 {
+    background-color: #ffecdc;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.div5 > p {
+    padding-top: 175px;
+    margin: 0;
+}
+
+.tddiv6 {
+    height: 5vh;
+}
+
+.div6 {
+    background-color: #f0f4dc;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.div6 > p {
+    padding-top: 15px;
+    margin: 0;
+}
+
+.lowerbodytable {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.lowerbodytable, .lowerbodytable tr, .lowerbodytable td{
+    border: none;
+}
+
+.div7 {
+    min-height: 26vh;
+    border: 1px black solid;
+    border-top: 1px transparent solid;
+}
+
+
+.y {
+    background-color: white;
+    border: 1px black solid;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 30px;
+    padding: 10px 20px 10px 0;
+}
+
+@media screen and (max-width: 700px) {
+    .upperbodytable {
+        margin-bottom: 0px;
+    }
+}

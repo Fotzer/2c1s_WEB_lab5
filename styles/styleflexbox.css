@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.blue {
+    background-color: #c8dcf4;
+}
+
+.div1 {
+    min-height: 25vh;
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.x
+{
+    background-color: white;
+    border: 1px black solid;
+    margin-left: 30px;
+    padding: 10px;
+}
+
+.midbody {
+    min-height: 50vh;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    background-color: black;
+
+    display: flex;
+
+}
+
+.div2 {
+    background-color: #ffecdc;
+    flex: 1;
+    border-right: 1px black solid;
+}
+
+.linklist {
+    padding-left: 20px;
+}
+
+.div3 {
+    width: 100%;
+    background-color: #f0f4dc;
+    text-align: center;
+    border-bottom: 1px black solid;
+}
+
+.div4 {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 8;
+}
+
+.div5 {
+    background-color: #ffecdc;
+    border-left: 1px black solid;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.div6 {
+    background-color: #f0f4dc;
+    border-top: 1px black solid;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}   
+
+.div7 {
+    min-height: 25vh;
+    border: 1px black solid;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.y {
+    background-color: white;
+    border: 1px black solid;
+    margin-right: 30px;
+    padding: 10px 20px 10px 0;
+}
+
+.mainpageimage {
+    width: 100%;
+}
+
+.mapimage{
+    width: 150px;
+}
+
+.flexbox0 {
+    display: flex;
+    width: 100%;
+}
+
+.flexbox1 {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexbox2 {
+    height: 100%;
+    display: flex;
+}
+
+.flexbox3 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 700px) {
+    .midbody {
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .flexbox0 {
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .flexbox2 {
+        flex-direction: column;
+        flex-grow: 1;
+        height: 300px;
+    }
+    .div2 {
+        border-right: 0;
+        border-bottom: 1px black solid;
+    }
+    .div4 {
+        flex: 10;
+    }
+    .div5 {
+        border-left: 0;
+        border-top: 1px black solid;
+    }
+}
