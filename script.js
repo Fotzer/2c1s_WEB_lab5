@@ -26,7 +26,36 @@ document.getElementById("script2-button").addEventListener("click", pentagonArea
 
 
 function script3() {
+    function reverseString(str) {
+        return str.split("").reverse().join("");
+    }
 
+    const input = document.getElementById("script3-input").value;
+    const reversedValue = reverseString(input);
+    alert(reversedValue);
+
+    document.cookie = `script3Cookie=${reversedValue};`;
+    console.log(document.cookie);
 }
 
-document.getElementById("script2-button").addEventListener("click", script3);
+document.getElementById("script3-button").addEventListener("click", script3);
+
+function onLoad() {
+    function checkCookiesScript3() {
+        const cookieScript3Value = document.cookie
+            .split(";")
+            .find((row) => row.startsWith("script3Cookie="))
+            ?.split("=")[1];
+
+        if(cookieScript3Value !== undefined) {
+            alert(`Script3 cookies = ${cookieScript3Value}, cookies will be deleted after "OK" button click`);
+            document.cookie = ``;
+            alert(`Cookies were deleted`);
+        }
+    }
+    console.log(document.cookie);
+    checkCookiesScript3();
+}
+
+document.onload = onLoad;
+window.addEventListener("load", onLoad);
