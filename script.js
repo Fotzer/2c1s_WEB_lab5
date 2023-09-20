@@ -89,5 +89,12 @@ function onLoad() {
     checkBorderColor();
 }
 
+function toggleScript5Form() {
+    const script5Div = document.getElementById("script5-div");
+    script5Div.classList.toggle("hidden");
+}
+
+document.getElementById("x").addEventListener("click", toggleScript5Form);
+
 document.onload = onLoad;
 window.addEventListener("load", onLoad);

@@ -12,7 +12,7 @@ body {
     align-items: center;
 }
 
-.x
+#x
 {
     background-color: white;
     border: 1px black solid;
@@ -112,6 +112,10 @@ body {
 
 .mapimage{
     width: 150px;
+}
+
+#script5-div.hidden {
+    display: none;
 }
 
 @media screen and (max-width: 700px){
