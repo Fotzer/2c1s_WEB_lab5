@@ -35,7 +35,6 @@ function script3() {
     alert(reversedValue);
 
     document.cookie = `script3Cookie=${reversedValue}`;
-    console.log(document.cookie);
 }
 
 document.getElementById("script3-button").addEventListener("click", script3);
@@ -46,7 +45,6 @@ function setBorderColor(color) {
 
     const elements = document.getElementsByClassName("border-change");
     
-    console.log(elements);
     
     for(const element of elements) {
         element.style.borderColor  = color;
@@ -71,7 +69,6 @@ function toggleScript5FormVisibility() {
 document.getElementById("x").addEventListener("click", toggleScript5FormVisibility);
 
 function checkCssForTags() {
-    console.log(localStorage.getItem("tagList"));
     const tags = localStorage.getItem("tagList").split(" ");
 
     for(const tag of tags) {
@@ -112,15 +109,14 @@ function removeCssFromTag() {
         localStorage.removeItem(tag);
         
         let tagList = localStorage.getItem("tagList").split(" ");
-        
-        if(!tagList.includes(tag)) {
+        if(tagList.includes(tag)) {
 
-            tagList.filter((element) => {
+            tagList = tagList.filter((element) => {
                 return element !== tag;
             });
 
             tagList = tagList.join(" ");
-            localStorage.setItem(tag, css);
+            localStorage.setItem("tagList", tagList);
         }
         checkCssForTags();
 
@@ -156,7 +152,6 @@ function onLoad() {
 
     if(localStorage.getItem("tagList") === null) {
         localStorage.setItem("tagList", "");
-        console.log(1);
     }
 
     checkCookiesScript3();
@@ -164,5 +159,4 @@ function onLoad() {
     checkCssForTags();
 }
 
-document.onload = onLoad;
 window.addEventListener("load", onLoad);
