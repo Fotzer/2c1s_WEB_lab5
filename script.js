@@ -40,6 +40,29 @@ function script3() {
 
 document.getElementById("script3-button").addEventListener("click", script3);
 
+function setBorderColor(color) {
+    const midBody = document.getElementById("midbody");
+    midBody.style.backgroundColor = color;
+
+    const elements = document.getElementsByClassName("border-change");
+    
+    console.log(elements);
+    
+    for(const element of elements) {
+        element.style.borderColor  = color;
+    }
+}
+
+function script4() {
+    const color = document.getElementById("script4-input").value;
+    setBorderColor(color);
+
+    localStorage.setItem("border-color", color);
+}
+
+document.getElementById("script4-button").addEventListener("click", script4);
+
+
 function onLoad() {
     function checkCookiesScript3() {
         const cookieScript3Value = document.cookie
@@ -54,8 +77,16 @@ function onLoad() {
             location.reload();
         }
     }
-    console.log(document.cookie);
+
+    function checkBorderColor() {
+        const color = localStorage.getItem("border-color");
+        if(color !== undefined) {
+            setBorderColor(color);
+        }
+    }
+    
     checkCookiesScript3();
+    checkBorderColor();
 }
 
 document.onload = onLoad;
