@@ -49,7 +49,7 @@ function onLoad() {
 
         if(cookieScript3Value !== undefined) {
             alert(`Script3 cookies = ${cookieScript3Value}, cookies will be deleted after "OK" button click`);
-            document.cookie = ``;
+            document.cookie = `username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
             alert(`Cookies were deleted`);
         }
     }
