@@ -8,4 +8,13 @@ function swap25() {
 
 document.getElementById("script1-button").addEventListener("click", swap25);
 
-document.getElementById("script1").addEventListener("click", swap25);
+function pentagonArea() {
+    const side = Number(document.getElementById("script2-input").value);
+    const area = Math.sqrt(5*(5+2*Math.sqrt(5)))*(side**2)/4;
+
+    const script2Result = document.getElementById("script2-result");
+    
+    script2Result.innerHTML = `Script 2 result: ${area}`;
+}
+
+document.getElementById("script2-button").addEventListener("click", pentagonArea);
