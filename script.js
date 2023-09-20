@@ -63,6 +63,34 @@ function script4() {
 document.getElementById("script4-button").addEventListener("click", script4);
 
 
+function toggleScript5FormVisibility() {
+    const script5Div = document.getElementById("script5-div");
+    script5Div.classList.toggle("hidden");
+}
+
+document.getElementById("x").addEventListener("click", toggleScript5FormVisibility);
+
+function addCssToTag() {
+    const tag = document.getElementById("script5-input").value;
+    const css = document.getElementById("script5-textarea").value;
+
+    if(tag != "tagList") {
+        let tagList = localStorage.getItem("tagList").split(" ");
+        if(!tagList.includes(tag)) {
+            tagList.push(tag);
+            tagList = tagList.join(" ");
+            localStorage.setItem("tagList", tagList);
+        }
+
+        localStorage.setItem(tag, css);
+    } else {
+        alert("hehehe");
+    }
+}
+
+document.getElementById("script5-button1").addEventListener("click", addCssToTag);
+
+
 function onLoad() {
     function checkCookiesScript3() {
         const cookieScript3Value = document.cookie
@@ -88,13 +116,6 @@ function onLoad() {
     checkCookiesScript3();
     checkBorderColor();
 }
-
-function toggleScript5Form() {
-    const script5Div = document.getElementById("script5-div");
-    script5Div.classList.toggle("hidden");
-}
-
-document.getElementById("x").addEventListener("click", toggleScript5Form);
 
 document.onload = onLoad;
 window.addEventListener("load", onLoad);
