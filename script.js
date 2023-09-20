@@ -118,7 +118,10 @@ function removeCssFromTag() {
             tagList = tagList.join(" ");
             localStorage.setItem("tagList", tagList);
         }
-        checkCssForTags();
+
+        for(const element of document.getElementsByTagName(tag)) {
+            element.style.cssText = "";
+        }
 
     } else {
         alert("hehehe");
@@ -155,8 +158,8 @@ function onLoad() {
     }
 
     checkCookiesScript3();
-    checkBorderColor();
     checkCssForTags();
+    checkBorderColor();
 }
 
 window.addEventListener("load", onLoad);
